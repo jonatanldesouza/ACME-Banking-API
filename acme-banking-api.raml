@@ -34,6 +34,13 @@ protocols:
       displayName: Update account information for a specific account ID
       responses:
         201: 
+        400:
+          headers:
+          body:
+            example:
+              type: Missing attribute
+              title: Body structure incomplete
+              detail: Body is missing the account id.
     delete:
       displayName: Delete an account with a specific account ID 
       responses:
