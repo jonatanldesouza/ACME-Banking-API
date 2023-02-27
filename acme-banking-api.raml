@@ -90,10 +90,11 @@ types:
     body:        
     responses:
       200:  
+        body:
+          type: Customer
         headers:
           Cache-Control:
-            example: max-age=604800 #1 Week              
-        body:
+            example: max-age=604800 #1 Week                      
   post:
     displayName: Create a new customer
     responses:
