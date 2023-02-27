@@ -54,8 +54,12 @@ protocols:
         200:
     patch:
       displayName: Patch information for a specific ID
+      responses:
+        204:
     delete:      
       displayName: Delete information for a specific ID
+      responses:
+        201:
     /accounts:
       get:
         displayName: Get all accounts for a specific customer ID  
