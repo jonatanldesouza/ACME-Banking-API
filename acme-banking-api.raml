@@ -30,6 +30,9 @@ protocols:
   /{account_id}:
     get:
       displayName: Get account information for a specific account ID
+      headers:
+          Accept:
+            required: false 
       responses:
         200:
     put:      
@@ -51,12 +54,16 @@ protocols:
     /transactions:
       get:
         displayName: Get all transactions for a specific account ID 
+        headers:
+          Accept:
+            required: false 
         responses:
           200:
 
 
 /customers:
   get:
+    
     displayName: Get all customers in the bank  
     headers:
           ##Accept?: não obrigatorio
@@ -85,6 +92,9 @@ protocols:
   /{customer_id}:
     get:
       displayName: Get information for a specific ID
+      headers:
+          Accept:
+            required: false      
       responses:
         200:
     patch:
@@ -105,10 +115,10 @@ protocols:
         204:
     /accounts:
       get:
+        displayName: Get all accounts for a specific customer ID  
         headers:
           Accept:
-            required: false
-        displayName: Get all accounts for a specific customer ID  
+            required: false 
         responses:
           200:
 
@@ -126,9 +136,9 @@ protocols:
             detail: Body is missing the account id.  
   /{transaction_id}:
     get:
+      displayName: Get transaction information for a specific transaction ID
       headers:
           Accept:
-            required: false
-      displayName: Get transaction information for a specific transaction ID
+            required: false 
       responses:
           200:
