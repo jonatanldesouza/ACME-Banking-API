@@ -29,6 +29,9 @@ protocols:
         201: 
     delete:
       displayName: Delete an account with a specific account ID 
+      responses:
+        202:
+        
     /transactions:
       get:
         displayName: Get all transactions for a specific account ID 
@@ -59,7 +62,7 @@ protocols:
     delete:      
       displayName: Delete information for a specific ID
       responses:
-        201:
+        202:
     /accounts:
       get:
         displayName: Get all accounts for a specific customer ID  
