@@ -91,12 +91,14 @@ types:
     responses:
       200:  
         body:
-          type: Customer
+          type: Customer[]
         headers:
           Cache-Control:
             example: max-age=604800 #1 Week                      
   post:
     displayName: Create a new customer
+    body:
+      type: Customer
     responses:
       201:
       400:
