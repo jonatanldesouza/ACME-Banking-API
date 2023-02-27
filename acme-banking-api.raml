@@ -117,7 +117,9 @@ types:
           Accept:
             required: false      
       responses:
-        200:  
+        200: 
+          body:
+            type: Customer
           headers:
             Cache-Control:
               example: max-age=604800 #1 Week        
@@ -144,14 +146,16 @@ types:
           Accept:
             required: false 
         responses:
-          200:  
+          200:
+            body:
+              type: Account 
             headers:
               Cache-Control:
                 example: max-age=604800 #1 Week
 
 /transactions:
   post:    
-    displayName: Create a new transaction
+    displayName: Create a new transaction    
     body:
       type: Transaction
     responses:
@@ -170,7 +174,9 @@ types:
           Accept:
             required: false 
       responses:
-          200:  
+          200:
+            body:
+              type: Transaction  
             headers:
               Cache-Control:
                 example: max-age=604800 #1 Week
