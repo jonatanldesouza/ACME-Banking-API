@@ -17,7 +17,7 @@ types:
   Transaction: !include datatypes/Transaction.raml
   CustomErrorMessage: !include datatypes/CustomErrorMessage.raml
 
-  
+
 /accounts:
   post:    
     displayName: Create a new account
@@ -42,7 +42,9 @@ types:
           Accept:
             required: false 
       responses:
-        200:  
+        200:
+          body:
+            type: Account  
           headers:
             Cache-Control:
               example: max-age=604800 #1 Week
