@@ -34,7 +34,10 @@ protocols:
           Accept:
             required: false 
       responses:
-        200:
+        200:  
+          headers:
+            Cache-Control:
+              example: max-age=604800 #1 Week
     put:      
       displayName: Update account information for a specific account ID
       responses:
@@ -58,7 +61,10 @@ protocols:
           Accept:
             required: false 
         responses:
-          200:
+          200:  
+            headers:
+              Cache-Control:
+                example: max-age=604800 #1 Week
 
 
 /customers:
@@ -123,7 +129,10 @@ protocols:
           Accept:
             required: false 
         responses:
-          200:
+          200:  
+            headers:
+              Cache-Control:
+                example: max-age=604800 #1 Week
 
 /transactions:
   post:    
@@ -145,6 +154,6 @@ protocols:
             required: false 
       responses:
           200:  
-          headers:
-            Cache-Control:
-              example: max-age=604800 #1 Week
+            headers:
+              Cache-Control:
+                example: max-age=604800 #1 Week
