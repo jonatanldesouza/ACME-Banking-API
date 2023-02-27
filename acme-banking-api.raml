@@ -19,6 +19,8 @@ protocols:
   /{account_id}:
     get:
       displayName: Get account information for a specific account ID
+      responses:
+        200:
     put:      
       displayName: Update account information for a specific account ID  
     delete:
@@ -26,17 +28,22 @@ protocols:
     /transactions:
       get:
         displayName: Get all transactions for a specific account ID 
+        responses:
+          200:
 
 
 /customers:
   get:
     displayName: Get all customers in the bank    
   post:
-    displayName: Create a new customer   
+    displayName: Create a new customer
+       
 
   /{customer_id}:
     get:
       displayName: Get information for a specific ID
+      responses:
+        200:
     patch:
       displayName: Patch information for a specific ID
     delete:      
@@ -44,6 +51,8 @@ protocols:
     /accounts:
       get:
         displayName: Get all accounts for a specific customer ID  
+        responses:
+          200:
 
 /transactions:
   post:    
