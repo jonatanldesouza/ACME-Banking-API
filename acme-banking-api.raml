@@ -15,9 +15,6 @@ protocols:
   get:
     displayName: Get All Accounts info
 
-/allcustomers:
-  get:
-    displayName: Get All Customers info
 
 /customers:
   get:
@@ -27,12 +24,13 @@ protocols:
 
   /{customer_id}:
     get:
-      displayName: Get  information for a specific ID
+      displayName: Get information for a specific ID
     patch:
       displayName: Patch information for a specific ID
     delete:      
       displayName: Delete information for a specific ID
-
+    /accounts:
+      
 
 /transactions:
   get:
