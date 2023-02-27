@@ -45,5 +45,7 @@ protocols:
         displayName: Get all accounts for a specific customer ID  
 
 /transactions:
-  get:
-    displayName: Get All Transactions
+  post:    
+    displayName: Create a new transaction
+  /{transaction_id}:
+    
