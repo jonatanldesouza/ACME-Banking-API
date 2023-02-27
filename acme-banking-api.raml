@@ -16,7 +16,7 @@ protocols:
   post:    
     displayName: Create a new account
     responses:
-          201:
+      201:
 
   /{account_id}:
     get:
@@ -24,7 +24,9 @@ protocols:
       responses:
         200:
     put:      
-      displayName: Update account information for a specific account ID  
+      displayName: Update account information for a specific account ID
+      responses:
+        201: 
     delete:
       displayName: Delete an account with a specific account ID 
     /transactions:
@@ -41,6 +43,8 @@ protocols:
       200:  
   post:
     displayName: Create a new customer
+    responses:
+      201:
        
 
   /{customer_id}:
@@ -61,6 +65,8 @@ protocols:
 /transactions:
   post:    
     displayName: Create a new transaction
+    responses:
+      201:
   /{transaction_id}:
     get:
       displayName: Get transaction information for a specific transaction ID
