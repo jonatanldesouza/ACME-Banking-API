@@ -59,7 +59,9 @@ protocols:
   get:
     displayName: Get all customers in the bank  
     headers:
-          Accept?:
+          ##Accept?: não obrigatorio
+          Accept:
+            required: false ##me
             example: application/json  
     body:
         
