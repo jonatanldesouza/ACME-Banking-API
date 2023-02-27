@@ -12,7 +12,8 @@ protocols:
   - HTTPS
 #register new datatypes  
 types:
-  Account: !include Account.raml
+  Account: !include datatypes/Account.raml
+  Customer: !include datatypes/Customer.raml
 
 /accounts:
   post:    
