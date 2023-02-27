@@ -38,9 +38,9 @@ protocols:
           headers:
           body:
             example:
-              type: Missing attribute
-              title: Body structure incomplete
-              detail: Body is missing the account id.
+              type: Service Unavailable
+              title: Service Unavailable
+              detail: The account service is not available
     delete:
       displayName: Delete an account with a specific account ID 
       responses:
@@ -80,6 +80,13 @@ protocols:
       displayName: Patch information for a specific ID
       responses:
         204:
+        503:
+          headers:
+          body:
+            example:
+              type: Service Unavailable
+              title: Service Unavailable
+              detail: The custumer service is not available  
     delete:      
       displayName: Delete information for a specific ID
       responses:
