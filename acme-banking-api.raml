@@ -55,6 +55,13 @@ protocols:
     displayName: Create a new customer
     responses:
       201:
+      400:
+        headers:
+        body:
+          example:
+            type: Missing attribute
+            title: Body structure incomplete
+            detail: Body is missing the account id.  
        
 
   /{customer_id}:
@@ -82,6 +89,13 @@ protocols:
     displayName: Create a new transaction
     responses:
       201:
+      400:
+        headers:
+        body:
+          example:
+            type: Missing attribute
+            title: Body structure incomplete
+            detail: Body is missing the account id.  
   /{transaction_id}:
     get:
       displayName: Get transaction information for a specific transaction ID
