@@ -1,6 +1,9 @@
 #%RAML 1.0
 title: ACME Banking API
-description: "Base URI = URL final donde estara la app, mycompany.com/api\n\n"
+description: |-
+  Base URI = URL final donde estara la app, mycompany.com/api
+
+  This API offers acces to personal banking data
 mediaType:
   - application/json
 protocols:
@@ -9,4 +12,7 @@ protocols:
 /accounts:
   get:
     displayName: Get All Accounts info
+/customers:
+  get:
+    displayName: Get All Customers info
 /new-resource: {}
