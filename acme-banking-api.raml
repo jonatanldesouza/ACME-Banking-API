@@ -12,13 +12,13 @@ protocols:
   - HTTPS
 #register new datatypes  
 types:
-  Account!include Account.raml
+  Account: !include Account.raml
 
 /accounts:
   post:    
     displayName: Create a new account
     body:
-      type: Account.raml
+      type: Account
     responses:
       201:
       400:
