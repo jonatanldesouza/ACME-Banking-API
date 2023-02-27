@@ -96,7 +96,10 @@ protocols:
           Accept:
             required: false      
       responses:
-        200:
+        200:  
+          headers:
+            Cache-Control:
+              example: max-age=604800 #1 Week        
     patch:
       displayName: Patch information for a specific ID
       responses:
@@ -141,4 +144,7 @@ protocols:
           Accept:
             required: false 
       responses:
-          200:
+          200:  
+          headers:
+            Cache-Control:
+              example: max-age=604800 #1 Week
