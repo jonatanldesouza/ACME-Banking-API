@@ -61,7 +61,7 @@ protocols:
     headers:
           ##Accept?: não obrigatorio
           Accept:
-            required: false ##me
+            required: false ##mesmo sentido da linha acima comentada
             example: application/json  
     body:
         
@@ -105,6 +105,9 @@ protocols:
         204:
     /accounts:
       get:
+        headers:
+          Accept:
+            required: false
         displayName: Get all accounts for a specific customer ID  
         responses:
           200:
@@ -123,6 +126,9 @@ protocols:
             detail: Body is missing the account id.  
   /{transaction_id}:
     get:
+      headers:
+          Accept:
+            required: false
       displayName: Get transaction information for a specific transaction ID
       responses:
           200:
