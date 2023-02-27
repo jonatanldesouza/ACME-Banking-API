@@ -10,13 +10,14 @@ version: v1
 protocols:
   - HTTP
   - HTTPS
-
+  
+!include Account.raml
 
 /accounts:
   post:    
     displayName: Create a new account
     body:
-      type: Account.raml
+      type: !include Account.raml
     responses:
       201:
       400:
