@@ -15,7 +15,12 @@ protocols:
   post:    
     displayName: Create a new account
 
-  /{account_id}	  
+  /{account_id}:
+    get:
+      displayName: Get account information for a specific account ID
+    put:      
+      displayName: Update account information for a specific account ID  
+    d    
 
 
 /customers:
