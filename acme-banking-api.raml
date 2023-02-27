@@ -20,7 +20,7 @@ protocols:
       400:
         headers:
           Accept:
-            example: application/              
+            example: application/json              
         body:
           example:
             type: Missing attribute
@@ -59,6 +59,8 @@ protocols:
   get:
     displayName: Get all customers in the bank  
     headers:
+          Accept:
+            example: application/json  
     body:
         
     responses:
