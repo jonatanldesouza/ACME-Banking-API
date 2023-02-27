@@ -63,18 +63,19 @@ protocols:
 
 /customers:
   get:
-    
     displayName: Get all customers in the bank  
     headers:
           ##Accept?: não obrigatorio
           Accept:
             required: false ##mesmo sentido da linha acima comentada
             example: application/json  
-    body:
-        
+    body:        
     responses:
       200:  
         headers:
+          Cache-Control:
+            example:
+              
         body:
   post:
     displayName: Create a new customer
