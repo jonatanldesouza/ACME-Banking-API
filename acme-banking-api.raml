@@ -143,19 +143,9 @@ resourceTypes:
                 example: max-age=604800 #1 Week
 
 /transactions:
-  post:    
-    displayName: Create a new transaction    
-    body:
-      type: Transaction
-    responses:
-      201:
-      400:
-        headers:
-        body:
-          example:
-            type: Missing attribute
-            title: Body structure incomplete
-            detail: Body is missing the account id.  
+
+  type:
+    Collection  
 
   /{transaction_id}:
     get:
