@@ -1,5 +1,23 @@
 #%RAML 1.0 ResourceType
 
 
-post:
-  
+post:    
+  displayName: Create a new account
+  body:
+    type: Account
+  responses:
+    201: 
+      body:
+        example: OK
+      headers:
+        Location:
+          example: /accounts/acc-123
+    400:
+      headers:
+        Accept:
+          example: application/json              
+      body:
+        example:
+          type: Missing attribute
+          title: Body structure incomplete
+          detail: Body is missing the account id.
