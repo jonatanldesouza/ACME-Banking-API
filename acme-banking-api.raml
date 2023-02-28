@@ -29,7 +29,8 @@ documentation:
       example: !include examples/AccountExample.raml
     responses:
       201: 
-        description: "OK"
+        body:
+          displayName: OK
         headers:
           Location:
             example: /accounts/acc-123
