@@ -4,7 +4,7 @@
 post:    
   displayName: Create a new <<resourcePathName>>
   body:
-    type: <<resourcePathName>> | !sin
+    type: <<resourcePathName | !singularize | !uppercamelcase>>
   responses:
     201: 
       body:
