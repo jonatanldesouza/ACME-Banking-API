@@ -14,7 +14,7 @@ protocols:
 
 types:
   Account: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/datatypes/Account.raml
-  
+
   Customer: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/datatypes/Customer.raml
 
   Transaction: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/datatypes/Transaction.raml
@@ -30,7 +30,7 @@ documentation:
     displayName: Create a new account
     body:
       type: Account
-      example: !include examples/AccountExample.raml
+      example: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/examples/AccountExample.raml
     responses:
       201: 
         body:
@@ -58,7 +58,7 @@ documentation:
         200:
           body:
             type: Account  
-            example: !include examples/AccountExample.raml              
+            example: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/examples/AccountExample.raml              
           headers:
             Cache-Control:
               example: max-age=604800 #1 Week
@@ -115,7 +115,7 @@ documentation:
     displayName: Create a new customer
     body:
       type: Customer
-      example: !include examples/CustomerExampleExterna.raml
+      example: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/examples/CustomerExampleExterna.raml
     responses:
       201:
       400:
