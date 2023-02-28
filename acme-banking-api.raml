@@ -112,6 +112,8 @@ traits:
   /{customer_id}:
     get:
       displayName: Get information for a specific ID
+      is:
+        - Cacheable
       headers:
           Accept:
             required: false      
@@ -141,6 +143,8 @@ traits:
     /accounts:
       get:
         displayName: Get all accounts for a specific customer ID  
+        is:
+          - Cacheable
         headers:
           Accept:
             required: false 
@@ -160,6 +164,8 @@ traits:
   /{transaction_id}:
     get:
       displayName: Get transaction information for a specific transaction ID
+      is:
+        - Cacheable
       headers:
           Accept:
             required: false 
