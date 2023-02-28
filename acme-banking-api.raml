@@ -40,7 +40,7 @@ uses:
     Banking.Collection
   post:
     body:
-      example:
+      example: !include examples/AccountExample.raml
         
         
   
@@ -168,7 +168,9 @@ uses:
 /transactions:
 
   type:
-    Banking.Collection  
+    Banking.Collection
+    body:
+    example: !include examples/AccountExample.raml  
 
   /{transaction_id}:
     get:
