@@ -39,6 +39,8 @@ traits:
   /{account_id}:
     get:      
       displayName: Get account information for a specific account ID
+      is:
+        - Cacheable
       headers:
           Accept:
             required: false 
