@@ -23,6 +23,7 @@ types:
     displayName: Create a new account
     body:
       type: Account
+      example: !include examples/AccountExample.raml
     responses:
       201:
         headers:
@@ -172,7 +173,7 @@ types:
             type: Missing attribute
             title: Body structure incomplete
             detail: Body is missing the account id.  
-            
+
   /{transaction_id}:
     get:
       displayName: Get transaction information for a specific transaction ID
