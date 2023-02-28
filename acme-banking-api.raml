@@ -36,7 +36,8 @@ uses:
   Banking: libraries/BankingLibrary.raml
 
 securitySchemes:
-  JWT: !include 
+  JWT: !include security-schemes/JWTToken.raml
+  
 /accounts:
   type:
     Banking.Collection
