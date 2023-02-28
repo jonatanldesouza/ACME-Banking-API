@@ -95,20 +95,8 @@ resourceTypes:
         headers:
           Cache-Control:
             example: max-age=604800 #1 Week                      
-  post:
-    displayName: Create a new customer
-    body:
-      type: Customer
-      example: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/examples/CustomerExampleExterna.raml
-    responses:
-      201:
-      400:
-        headers:
-        body:
-          example:
-            type: Missing attribute
-            title: Body structure incomplete
-            detail: Body is missing the account id.  
+  type:
+    Collection  
        
 
   /{customer_id}:
