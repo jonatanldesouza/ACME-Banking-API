@@ -37,14 +37,14 @@ uses:
 
 /accounts:
   type:
-    Collection
+    Banking.Collection
   
 
   /{account_id}:
     get:      
       displayName: Get account information for a specific account ID
       is:
-        - Cacheable
+        - Banking.Cacheable
       headers:
           Accept:
             required: false 
@@ -78,7 +78,7 @@ uses:
       get:
         displayName: Get all transactions for a specific account ID 
         is:
-          - Cacheable
+          - Banking.Cacheable
         headers:
           Accept:
             required: false 
@@ -95,7 +95,7 @@ uses:
   get:
     displayName: Get all customers in the bank  
     is:
-      - Cacheable
+      - Banking.Cacheable
     headers:
           ##Accept?: não obrigatorio
           Accept:
@@ -110,14 +110,14 @@ uses:
           Cache-Control:
             example: max-age=604800 #1 Week                      
   type:
-    Collection  
+    Banking.Collection  
        
 
   /{customer_id}:
     get:
       displayName: Get information for a specific ID
       is:
-        - Cacheable
+        - Banking.Cacheable
       headers:
           Accept:
             required: false      
@@ -148,7 +148,7 @@ uses:
       get:
         displayName: Get all accounts for a specific customer ID  
         is:
-          - Cacheable
+          - Banking.Cacheable
         headers:
           Accept:
             required: false 
@@ -163,13 +163,13 @@ uses:
 /transactions:
 
   type:
-    Collection  
+    Banking.Collection  
 
   /{transaction_id}:
     get:
       displayName: Get transaction information for a specific transaction ID
       is:
-        - Cacheable
+        - Banking.Cacheable
       headers:
           Accept:
             required: false 
