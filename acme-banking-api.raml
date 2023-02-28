@@ -28,27 +28,7 @@ resourceTypes:
   Collection: !include resource-types/Collection.raml
 
 /accounts:
-  post:    
-    displayName: Create a new account
-    body:
-      type: Account
-      example: !include exchange_modules/b530ce0d-243a-4bef-870c-38cb7f7d7b55/banking-data-types/1.0.0/examples/AccountExample.raml
-    responses:
-      201: 
-        body:
-          example: OK
-        headers:
-          Location:
-            example: /accounts/acc-123
-      400:
-        headers:
-          Accept:
-            example: application/json              
-        body:
-          example:
-            type: Missing attribute
-            title: Body structure incomplete
-            detail: Body is missing the account id.   
+  
 
   /{account_id}:
     get:
