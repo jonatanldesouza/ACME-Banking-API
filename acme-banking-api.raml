@@ -49,6 +49,7 @@ types:
         200:
           body:
             type: Account  
+            example: !include examples/AccountExample.raml              
           headers:
             Cache-Control:
               example: max-age=604800 #1 Week
@@ -80,6 +81,7 @@ types:
           200:  
             body:
               type: Transaction[]
+              example: !include examples/TransactionExample.raml
             headers:
               Cache-Control:
                 example: max-age=604800 #1 Week
