@@ -116,7 +116,9 @@ uses:
             example: max-age=604800 #1 Week                      
   type:
     Banking.Collection  
-       
+  post:   
+    body:
+      example: !include examples/CustomerExample.raml        
 
   /{customer_id}:
     get:
@@ -169,8 +171,9 @@ uses:
 
   type:
     Banking.Collection
+  post:   
     body:
-    example: !include examples/AccountExample.raml  
+      example: !include examples/AccountExample.raml  
 
   /{transaction_id}:
     get:
