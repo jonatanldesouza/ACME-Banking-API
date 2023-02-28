@@ -37,11 +37,13 @@ uses:
 
 securitySchemes:
   JWT: !include security-schemes/JWTToken.raml
-  
+
 /accounts:
   type:
     Banking.Collection
   post:
+    securedBy:
+      - JWT
     body:
       example: !include examples/AccountExample.raml
         
