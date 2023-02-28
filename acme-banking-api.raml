@@ -153,7 +153,7 @@ types:
         responses:
           200:
             body:
-              type: Account 
+              type: Account[] 
             headers:
               Cache-Control:
                 example: max-age=604800 #1 Week
@@ -172,6 +172,7 @@ types:
             type: Missing attribute
             title: Body structure incomplete
             detail: Body is missing the account id.  
+            
   /{transaction_id}:
     get:
       displayName: Get transaction information for a specific transaction ID
